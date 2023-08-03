@@ -244,6 +244,9 @@ country_event = {
                 clr_country_flag = gt_magnate
                 clr_country_flag = gt_despot
             }
+			country_event = {
+				id = GT_score_display.4
+			}
         }
     }
 
