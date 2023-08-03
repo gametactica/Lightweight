@@ -1,0 +1,430 @@
+namespace = GT_score_setup
+
+#Score setup
+country_event = {
+    id = GT_score_setup.1
+    title = GT_score_setup.1.t
+    is_triggered_only = yes
+    hidden = yes
+    fire_only_once = yes
+
+    trigger = {
+        always = yes
+    }
+
+    immediate = {
+		#Nation counter
+		REB = {
+			set_variable = {
+				which = gt_campaign_nation_order
+				value = -1
+			}
+			
+		}
+        #Bishops
+        PAP = {
+            country_event = {
+				id = GT_score_setup.3
+			}
+        }
+        TRI = {
+            country_event = {
+				id = GT_score_setup.3
+			}
+        }
+        VER = {
+            country_event = {
+				id = GT_score_setup.3
+			}
+        }
+        WBG = {
+            country_event = {
+				id = GT_score_setup.3
+			}
+        }
+        #Princes
+        SAX = {
+            country_event = {
+				id = GT_score_setup.4
+			}
+        }
+        PAL = {
+            country_event = {
+				id = GT_score_setup.4
+			}
+        }
+        GEL = {
+            country_event = {
+				id = GT_score_setup.4
+			}
+        }
+        UBV = {
+            country_event = {
+				id = GT_score_setup.4
+			}
+        }
+        #Magnates
+        VEN = {
+            country_event = {
+				id = GT_score_setup.5
+			}
+        }
+        GEN = {
+            country_event = {
+				id = GT_score_setup.5
+			}
+        }
+        HSA = {
+            country_event = {
+				id = GT_score_setup.5
+			}
+        }
+        #Despots
+        TUR = {
+            country_event = {
+				id = GT_score_setup.6
+			}
+        }
+        FRA = {
+            country_event = {
+				id = GT_score_setup.6
+			}
+        }
+        DAN = {
+            country_event = {
+				id = GT_score_setup.6
+			}
+        }
+        POL = {
+            country_event = {
+				id = GT_score_setup.6
+			}
+        }
+        #Imperial objectives
+        #Hamburg
+        44 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Berlin
+        50 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Koln
+        85 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Nurnberg
+        67 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Ulm
+        1872 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Lucca
+        2980 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Conqueror Objectives
+        #Danzig
+        43 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Novgorod
+        310 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #London
+        236 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Amsterdam
+        97 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #​Pest
+        153 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Caffa
+        285 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Napoli
+        121 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Tunis
+        341 = {
+            set_province_flag = gt_conqueror_objective
+        }
+        #Trade node objectives
+        #Wien
+        134 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Saxony
+        61 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Rheinland
+        1876 = {
+            set_province_flag = gt_trade_node_objective
+        }
+        #Champagne
+        186 = {
+            set_province_flag = gt_trade_node_objective
+        }
+		country_event = {
+			id = GT_score_display.4
+		}
+    }
+    option = {
+        name = GT_score_setup.1.a
+    }
+}
+
+#Carry over flags
+country_event = {
+    id = GT_score_setup.2
+    title = GT_score_setup.2.t
+    is_triggered_only = yes
+    hidden = yes
+    trigger = {
+        always = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_switched_nation = yes
+            }
+            set_country_flag = gt_campaign_nation
+            if = {
+                limit = {
+                    overlord = { has_country_flag = gt_bishop }
+                }
+                set_country_flag = gt_bishop
+            }
+            else_if = {
+                limit = {
+                    overlord = { has_country_flag = gt_prince }
+                }
+                set_country_flag = gt_prince
+            }
+            else_if = {
+                limit = {
+                    overlord = { has_country_flag = gt_magnate }
+                }
+                set_country_flag = gt_magnate
+            }
+            else = {
+                set_country_flag = gt_despot
+            }
+            set_variable = {
+                which = gt_score
+                which = overlord
+            }
+			set_variable = {
+				which = gt_previous_score
+				value = overlord
+			}
+			set_variable = {
+				which = gt_gained_score
+				value = overlord
+			}
+            set_variable = {
+                which = gt_campaign_nation_order
+                which = overlord
+            }
+            overlord = {
+                clr_country_flag = gt_campaign_nation
+                clr_country_flag = gt_bishop
+                clr_country_flag = gt_prince
+                clr_country_flag = gt_magnate
+                clr_country_flag = gt_despot
+            }
+        }
+    }
+
+    option = {
+        name = GT_score_setup.2.a
+    }
+}
+
+#Add a bishop
+country_event = {
+	id = GT_score_setup.3
+	title = GT_score_setup.3.t
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		always = yes
+	}
+
+	immediate = {
+		set_country_flag = gt_campaign_nation
+		set_country_flag = gt_bishop
+		set_variable = {
+			which = gt_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_previous_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_gained_score
+			value = 0
+		}
+		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
+			ROOT = {
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = GT_score_setup.3.a
+	}
+}
+
+#Add a prince
+country_event = {
+	id = GT_score_setup.4
+	title = GT_score_setup.4.t
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		always = yes
+	}
+
+	immediate = {
+		set_country_flag = gt_campaign_nation
+		set_country_flag = gt_prince
+		set_variable = {
+			which = gt_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_previous_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_gained_score
+			value = 0
+		}
+		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
+			ROOT = {
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = GT_score_setup.4.a
+	}
+}
+
+#Add a magnate
+country_event = {
+	id = GT_score_setup.5
+	title = GT_score_setup.5.t
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		always = yes
+	}
+
+	immediate = {
+		set_country_flag = gt_campaign_nation
+		set_country_flag = gt_magnate
+		set_variable = {
+			which = gt_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_previous_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_gained_score
+			value = 0
+		}
+		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
+			ROOT = {
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = GT_score_setup.5.a
+	}
+}
+
+
+#Add a despot
+country_event = {
+	id = GT_score_setup.6
+	title = GT_score_setup.6.t
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		always = yes
+	}
+
+	immediate = {
+		set_country_flag = gt_campaign_nation
+		set_country_flag = gt_despot
+		set_variable = {
+			which = gt_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_previous_score
+			value = 0
+		}
+		set_variable = {
+			which = gt_gained_score
+			value = 0
+		}
+		REB = {
+			change_variable = {
+				which = gt_campaign_nation_order
+				value = 1
+			}
+			ROOT = {
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = PREV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = GT_score_setup.6.a
+	}
+}
