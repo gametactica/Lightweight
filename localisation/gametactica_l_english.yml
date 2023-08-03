@@ -1,6 +1,7 @@
 ﻿l_english:
 #Opinion modifiers
  GT_Superiority_Complex:0 "Superiority Complex"
+ GT_Reputation_Sabotaged:0 "Nation of Ill Repute"
 #Inability to raise stability message
  CANNOT_INCREASE_STABILITY:0 "The present conditions of our nation run counter to an increase in national stability."
 #Score events

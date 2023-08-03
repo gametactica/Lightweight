@@ -5240,3 +5240,9 @@ GT_Superiority_Complex = {
 	opinion = -25
 	yearly_decay = 3
 }
+
+GT_Reputation_Sabotaged = {
+	opinion = -10
+	yearly_decay = 15
+	min = -30
+}
