@@ -3,7 +3,7 @@
  GT_Superiority_Complex:0 "Superiority Complex"
  GT_Reputation_Sabotaged:0 "Nation of Ill Repute"
 #Inability to raise stability message
- CANNOT_INCREASE_STABILITY:0 "The present conditions of our nation run counter to an increase in national stability."
+ CANNOT_INCREASE_STABILITY:0 "It's not possible to increase stability while at war."
 #Score events
  GT_score.2.t:0 "Score gain trigger event"
  GT_score.2.a:0 ""
@@ -49,3 +49,19 @@
  GT_score_setup.5.a:0 ""
  GT_score_setup.6.t:0 "Become despot"
  GT_score_setup.6.a:0 ""
+#Protected area decision
+ GT_ProtectedArea_decision_title:0 "Seize Capital Lands"
+ GT_ProtectedArea_decision_desc:0 "Your previous loyal subjects have notified you that, at your command, they will defect back to your banner."
+ GT_ProtectedArea_tooltip:0 "Has lost capital area land."
+#Protected area events
+ event_01.1.t:0 "Capital Areas and Great Powers"
+ event_01.1.d:0 "During this campaign you will be able to re-integrate your capital area upon loss via a custom decision that will appear for use when applicable.  Also, if and when you achieve 'Great Power' status, you will begin developing a superiority complex which will cause you to view lesser nations and competitors alike with disdain.  This effect will only worsen as you wax in power.  As alliances require high mutual relations, expect to make less use of them as a 'Great Power'." 	
+ event_01.1.a:0 "I hereby accept these terms which are only as just as they benefit me personally."
+ event_lose_land.1.t:0 "An Ill-advised Annexation"
+ event_lose_land.1.d:0 "A holding we've acquired recently appears to have fanatically loyal subjects...which would be grand were they loyal to our rule.  Regretably, they are fiercely loyal to their "rightful lord" who previously held the holding.  Should this foreign ruler back a rebellion we would not be able to maintain control..."
+ event_lose_land.1.a:0 "Well that sounds precarious!"
+ event_tag_switch.1.t:0 "New Nation Proclaimed in Capital"
+ event_gain_land.1.t:0 "Loyalists in Foreign Holdings"
+ event_gain_land.1.d:0 "Once our loyalist faction was promised support from our soveriegn they poured out into the streets and easily overwhelmed the occupying forces, which were a mere skeleton crew in comparison."
+ event_gain_land.1.a:0 "What a foolish acquisition on their part; an utter display of incompetence."
+

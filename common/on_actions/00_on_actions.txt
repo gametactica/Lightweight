@@ -33,8 +33,6 @@ on_startup = {
 
 		#GT
 		event_01.1 #GT Protected Area
-		GT_Gov_Cap_1444.1 #Debug paternalistic G.C. calculation so starting army/navy/stated land is correct.
-		GT_Crownlands_1444.1 #Debug basegame issue where released subjects start with all CL and no army/navy
 		GT_score_setup.1
 
 		flavor_got.1 #Event for Gotland to select their mission tree
@@ -1155,14 +1153,6 @@ on_new_monarch = {
 		flavor_rus.128			# Peter the Great
 		flavor_rus.131			# Streltsy Payment
 		flavor_gbr.102			# Religious Stance of the King
-		GT_SuccessionM.1     #GT Monarchy
-		GT_SuccessionT.1     #GT Theocracy
-		GT_SuccessionH.1     #GT Horde
-		GT_SuccessionPap.1   #GT Papacy
-		GT_SuccessionMam.1   #GT Mamluks
-		GT_SuccessionMng.1   #GT Emperor of China
-		GT_SuccessionSG.1    #GT States General
-		GT_SuccessionDutch.1 #GT Dutch Republic
 	}
 	random_events = {
 		1000 = 0
@@ -4375,10 +4365,6 @@ on_fetishist_cult_change = {
 
 # country
 on_gain_great_power_status = {
-	events = 
-    {
-        event_gain_gp.1 #GT +Superiority Complex
-    }
 	if = {
 		limit = {
 			NOT = { has_country_flag = became_great_power_flag }
@@ -4389,10 +4375,7 @@ on_gain_great_power_status = {
 
 # country
 on_lose_great_power_status = {
-	events = 
-    {
-        event_lose_gp.1 #GT -Superiority Complex
-    }
+
 }
 
 # province
@@ -5215,11 +5198,6 @@ on_create_vassal = {
         	set_province_flag = gt_capital_province_@ROOT
 		}
     }
-	ROOT = {
-		country_event = {
-			id = GT_Crownlands_1444.1
-		}
-	}
 	#GT score
 	country_event = {
 		id = GT_score_setup.2

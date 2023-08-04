@@ -324,6 +324,7 @@ royal_marriage = {
 			NOT = { war_with = FROM }
 		}
 	}
+	effect = { add_truce_with = FROM } #GT
 }
 
 annexationaction = {
@@ -502,15 +503,23 @@ form_coalition = {
 		potential = {	
 		}
 		allow = {
-			has_opinion_modifier = {
-				modifier = aggressive_expansion
-				who = FROM
-			}		
-			NOT = {
-				has_opinion_modifier = {
-					modifier = aggressive_expansion
-					who = FROM
-					value = -49
+			OR = {
+				AND = {
+					ai = no
+					FROM = { ai = no }
+				}
+				AND = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+					}		
+					NOT = {
+						has_opinion_modifier = {
+							modifier = aggressive_expansion
+							who = FROM
+							value = -49
+						}
+					}
 				}
 			}
 		}

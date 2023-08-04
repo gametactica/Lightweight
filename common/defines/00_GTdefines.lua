@@ -6,6 +6,10 @@ NDefines.NDiplomacy.MIN_RELATIONS_TO_SUPPORT_INDEPENDENCE = 0       -- Opinion n
 NDefines.NDiplomacy.MAX_PEACE_TREATY_AE = 200                       -- Max peace treaty aggressive expansion
 NDefines.NDiplomacy.GOOD_RELATIONS = 30                             -- Opinion necessary to have good relations
 NDefines.NDiplomacy.GREAT_RELATIONS = 60                            -- Opinion necessary to have great relations
+NDefines.NDiplomacy.DISHONORABLE_PEACE_MONTHS = 36                  -- Peacing out of the war within the first specified months will inflict dishonorable peace
+NDefines.NDiplomacy.WARNING_YEARS = 10                              -- Years before warning expires.
+NDefines.NDiplomacy.ANNUL_TREATIES_YEARS = 20                       -- Years before annul treaties expires.
+NDefines.NDiplomacy.SUPPORT_REBELS_EFFECT = 20
 
 --NCountry
 --NDefines.NCountry.
@@ -25,3 +29,4 @@ NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 0.5
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0	-- How much this is increased from development
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0		-- How much this is increased from local autonomy        
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 50		-- Where dev will get capped by the system for calculations.
+NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60                       -- Minimum duration of edicts
