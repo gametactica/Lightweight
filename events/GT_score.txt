@@ -516,7 +516,7 @@ country_event = {
             which = gt_objective_score
             value = 0
         }
-        #20 points for each Conqueror or Imperial Objective that is held by either a Free City or a Trade City (cooperative objective).
+        #20 points for each Conqueror or Imperial Objective that is held by a trade league member (though not a trade league owner) (cooperative objective).
         every_province = {
             limit = {
                 OR = {
@@ -524,9 +524,9 @@ country_event = {
                     has_province_flag = gt_conqueror_objective
                 }
                 owner = {
-                    OR = {
-                        has_reform = free_city
-                        has_reform = trading_city
+                    AND = {
+                        is_in_trade_league = yes
+                        is_trade_league_leader = no
                     }
                 }
             }
@@ -537,17 +537,14 @@ country_event = {
                 }
             }
         }
-        #30 points each for having at least 20% share in the Wien, Saxony, Rhineland, or Champagne trade node to rank among the top 3 nations in that node. This is increased to 100 points if the share is at least 50%.
+        #30 points each for holding at least 10% trade power in the Wien, Saxony, Rhineland, or Champagne trade nodes. This is increased to 100 points if the nation hast most trade power.
         every_province = {
             limit = {
                 has_province_flag = gt_trade_node_objective
             }
             if = {
                 limit = {
-                    trade_share = {
-                        country = ROOT
-                        share = 50
-                    }
+                    is_strongest_trade_power = ROOT
                 }
                 ROOT = {
                     change_variable = {
@@ -560,7 +557,7 @@ country_event = {
                 limit = {
                     trade_share = {
                         country = ROOT
-                        share = 20
+                        share = 10
                     }
                 }
                 ROOT = {
