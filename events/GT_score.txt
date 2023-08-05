@@ -4,6 +4,7 @@ namespace = GT_score
 country_event = {
     id = GT_score.2
     title = GT_score.2.t
+    desc = GT_score.2.d
     is_triggered_only = yes
 
     trigger = {
