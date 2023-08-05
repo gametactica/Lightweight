@@ -4673,27 +4673,6 @@ on_province_owner_change = {
 			duration = -1
 		}
 	}
-	if = {             #GT Protected Area
-		limit = {
-        FROM = {
-            always = yes
-        }
-        has_province_flag = gt_capital_province_@FROM
-    }
-    clr_province_flag = can_reclaim_@FROM
-    set_province_flag = can_reclaim_@FROM
-    }
-
-    if = {              #GT Protected Area
-    limit = {
-        FROM = {
-            ai = no
-        }
-        has_province_flag = gt_capital_province_@FROM
-    }    
-    clr_province_flag = gt_protected_area_alert_@ROOT
-    set_province_flag = gt_protected_area_alert_@ROOT
-    }
 	#GT protected area
 	if = {
 		limit = {
@@ -5237,16 +5216,6 @@ on_create_vassal = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
 	}
-	#GT Protected Area
-	FROM = {
-    	every_province = {
-        	limit = {
-            	has_province_flag = gt_capital_province_@FROM
-        		}
-        	clr_province_flag = gt_capital_province_@ROOT
-        	set_province_flag = gt_capital_province_@ROOT
-		}
-    }
 	#GT score
 	FROM = {
 		save_event_target_as = gt_previous_nation
@@ -5254,6 +5223,15 @@ on_create_vassal = {
 	country_event = {
 		id = GT_setup.2
 		days = 1
+	}
+	#GT danzig fix
+	if = {
+		limit = {
+			tag = DNZ
+		}
+		country_event = {
+			id = GT_dnz.1
+		}
 	}
 }
 
