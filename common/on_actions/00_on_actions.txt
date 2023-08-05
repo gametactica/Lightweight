@@ -4686,6 +4686,34 @@ on_province_owner_change = {
     clr_province_flag = gt_protected_area_alert_@ROOT
     set_province_flag = gt_protected_area_alert_@ROOT
     }
+	#GT protected area
+	if = {
+		limit = {
+			has_province_flag = gt_protected_area
+			NOT = {
+				AND = {
+					owner = { has_country_flag = gt_campaign_nation }
+					owner = {
+						check_variable = {
+							which = gt_campaign_nation_order
+							which = ROOT
+						}
+					}
+					check_variable = {
+						which = gt_campaign_nation_order
+						which = owner
+					}
+				}
+			}
+		}
+		province_event = {
+			id = GT_protected_area.1
+		}
+		cede_province = FROM
+		province_event = {
+			id = GT_protected_area.2
+		}
+	}
 }
 
 # country

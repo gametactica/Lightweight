@@ -64,4 +64,9 @@
  event_gain_land.1.t:0 "Loyalists in Foreign Holdings"
  event_gain_land.1.d:0 "Once our loyalist faction was promised support from our soveriegn they poured out into the streets and easily overwhelmed the occupying forces, which were a mere skeleton crew in comparison."
  event_gain_land.1.a:0 "What a foolish acquisition on their part; an utter display of incompetence."
-
+ GT_protected_area.1.t:0 "Province lost due to area protection"
+ GT_protected_area.1.d:0 "We have lost province [Root.GetName] because its in a protected area"
+ GT_protected_area.1.a:0 "Taking it was a mistake"
+ GT_protected_area.2.t:0 "Province regained due to area protection"
+ GT_protected_area.2.d:0 "We have regained province [Root.GetName] because its in a protected area"
+ GT_protected_area.2.a:0 "At least not all is lost"

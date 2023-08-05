@@ -292,6 +292,15 @@ country_event = {
 				}
 			}
 		}
+		capital_scope = {
+			area = {
+				set_province_flag = gt_protected_area
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = ROOT
+				}
+			}
+		}
 	}
 
 	option = {
@@ -333,6 +342,15 @@ country_event = {
 				set_variable = {
 					which = gt_campaign_nation_order
 					which = PREV
+				}
+			}
+		}
+		capital_scope = {
+			area = {
+				set_province_flag = gt_protected_area
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = ROOT
 				}
 			}
 		}
@@ -380,6 +398,15 @@ country_event = {
 				}
 			}
 		}
+		capital_scope = {
+			area = {
+				set_province_flag = gt_protected_area
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = ROOT
+				}
+			}
+		}
 	}
 
 	option = {
@@ -422,6 +449,15 @@ country_event = {
 				set_variable = {
 					which = gt_campaign_nation_order
 					which = PREV
+				}
+			}
+		}
+		capital_scope = {
+			area = {
+				set_province_flag = gt_protected_area
+				set_variable = {
+					which = gt_campaign_nation_order
+					which = ROOT
 				}
 			}
 		}
