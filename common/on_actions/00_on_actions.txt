@@ -33,7 +33,7 @@ on_startup = {
 
 		#GT
 		event_01.1 #GT Protected Area
-		GT_score_setup.1
+		GT_setup.1
 
 		flavor_got.1 #Event for Gotland to select their mission tree
 		flavor_mng.42 #Event for the starting situation of the Ming 
@@ -456,7 +456,7 @@ on_colonial_liberation = {
 		save_event_target_as = gt_previous_nation
 	}
 	country_event = {
-		id = GT_score_setup.2
+		id = GT_setup.2
 		days = 1
 	}
 }
@@ -5253,7 +5253,7 @@ on_create_vassal = {
 		save_event_target_as = gt_previous_nation
 	}
 	country_event = {
-		id = GT_score_setup.2
+		id = GT_setup.2
 		days = 1
 	}
 }
