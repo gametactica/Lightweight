@@ -202,19 +202,19 @@ country_event = {
             set_country_flag = gt_campaign_nation
             if = {
                 limit = {
-                    overlord = { has_country_flag = gt_bishop }
+                    event_target:gt_previous_nation = { has_country_flag = gt_bishop }
                 }
                 set_country_flag = gt_bishop
             }
             else_if = {
                 limit = {
-                    overlord = { has_country_flag = gt_prince }
+                    event_target:gt_previous_nation = { has_country_flag = gt_prince }
                 }
                 set_country_flag = gt_prince
             }
             else_if = {
                 limit = {
-                    overlord = { has_country_flag = gt_magnate }
+                    event_target:gt_previous_nation = { has_country_flag = gt_magnate }
                 }
                 set_country_flag = gt_magnate
             }
@@ -223,21 +223,21 @@ country_event = {
             }
             set_variable = {
                 which = gt_score
-                which = overlord
+                which = event_target:gt_previous_nation
             }
 			set_variable = {
 				which = gt_previous_score
-				value = overlord
+				value = event_target:gt_previous_nation
 			}
 			set_variable = {
 				which = gt_gained_score
-				value = overlord
+				value = event_target:gt_previous_nation
 			}
             set_variable = {
                 which = gt_campaign_nation_order
-                which = overlord
+                which = event_target:gt_previous_nation
             }
-            overlord = {
+            event_target:gt_previous_nation = {
                 clr_country_flag = gt_campaign_nation
                 clr_country_flag = gt_bishop
                 clr_country_flag = gt_prince

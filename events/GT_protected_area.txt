@@ -1,6 +1,6 @@
 namespace = GT_protected_area
 
-country_event = {
+province_event = {
 	id = GT_protected_area.1
 	title = GT_protected_area.1.t
 	desc = GT_protected_area.1.d
@@ -14,7 +14,7 @@ country_event = {
 	}
 }
 
-country_event = {
+province_event = {
 	id = GT_protected_area.2
 	title = GT_protected_area.2.t
 	desc = GT_protected_area.2.d

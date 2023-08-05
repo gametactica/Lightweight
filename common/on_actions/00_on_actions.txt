@@ -451,6 +451,14 @@ on_colonial_liberation = {
 		}
 		country_event = { id = colonial_nation.90 days = 1 }
 	}
+	#GT
+	FROM = {
+		save_event_target_as = gt_previous_nation
+	}
+	country_event = {
+		id = GT_score_setup.2
+		days = 1
+	}
 }
 
 # country
@@ -1100,6 +1108,7 @@ on_siege_lost_province =  {
 # root = location, from = country that abandons colony
 # Fired right before the colony is abandoned.
 on_abandon_colony = {
+
 }
 
 # province
@@ -4705,6 +4714,19 @@ on_province_owner_change = {
 					}
 				}
 			}
+			AND = {
+				FROM = { has_country_flag = gt_campaign_nation }
+				FROM = {
+					check_variable = {
+						which = gt_campaign_nation_order
+						which = ROOT
+					}
+				}
+				check_variable = {
+					which = gt_campaign_nation_order
+					which = FROM
+				}
+			}
 		}
 		province_event = {
 			id = GT_protected_area.1
@@ -5227,6 +5249,9 @@ on_create_vassal = {
 		}
     }
 	#GT score
+	FROM = {
+		save_event_target_as = gt_previous_nation
+	}
 	country_event = {
 		id = GT_score_setup.2
 		days = 1
