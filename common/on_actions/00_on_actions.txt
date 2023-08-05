@@ -29,12 +29,11 @@ on_startup = {
 		save_global_event_target_as = EmperorOfChina
 	}
 	events = {
-		muslim_school_events.20 #Pick School
-
 		#GT
-		event_01.1 #GT Protected Area
+		GT_introduction.1
 		GT_setup.1
 
+		muslim_school_events.20 #Pick School
 		flavor_got.1 #Event for Gotland to select their mission tree
 		flavor_mng.42 #Event for the starting situation of the Ming 
 	#flavor_fra.15000 #Make the French Revolution happen if starting in 1789
