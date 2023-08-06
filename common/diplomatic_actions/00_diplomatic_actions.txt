@@ -612,3 +612,20 @@ break_alliance = {
 		on_alliance_broken_effect = yes
 	}
 }
+
+#GT
+warsubsidy = {
+	condition = {
+		tooltip = SUBSIDIES_RECEIVING_SUBSIDES
+		potential = {
+			always = yes
+		}
+		allow = {
+			NOT = {
+				subsidised_percent_amount = {
+					value = 0.1
+				}
+			}
+		}
+	}
+}

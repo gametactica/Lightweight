@@ -77,3 +77,5 @@
  GT_dnz.1.t:0 "Add teutonic cores"
  GT_dnz.1.d:0 ""
  GT_dnz.1.a:0 ""
+#Dilpomatic actions tooltips
+ SUBSIDIES_RECEIVING_SUBSIDES:0 "You cannot subsidise another nation while receiving subsidies yourself"
