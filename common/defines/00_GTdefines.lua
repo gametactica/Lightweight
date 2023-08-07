@@ -1,4 +1,5 @@
--- NDiplomacy
+--NDiplomacy
+--NDefines.NDiplomacy
 NDefines.NDiplomacy.ALLY_PEACE_COST_MULT = 4						-- Taking things from allies that are not fully called into the war costs this much more
 NDefines.NDiplomacy.ALLY_AE_MULT = 3								-- Taking things from allies that are not fully called into the war generates this much more AE
 NDefines.NDiplomacy.MIN_RELATIONS_TO_ALLY = 75						-- Alliances not possible if either country has an opinion of the other lower than this
@@ -22,6 +23,7 @@ NDefines.NCountry.CULTURE_COST_DIFF_ADJACENT = 0				    -- Difference in cost in
 NDefines.NCountry.CULTURE_COST_DIFF_PRIMARY = 25					-- Difference in cost in percent to convert to primary culture.
 NDefines.NCountry.PS_ARTILLERY_BARRAGE = 100                        -- Artillery barrage cost
 NDefines.NCountry.PS_FORCE_MARCH = 4                                -- Forced march cost
+NDefines.NCountry.PS_RAISE_WAR_TAXES = 4                            -- Monthly Cost
 
 --NEconomy
 --NDefines.NEconomy.
@@ -30,3 +32,8 @@ NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0	-- How much th
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0		-- How much this is increased from local autonomy        
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 50		-- Where dev will get capped by the system for calculations.
 NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60                       -- Minimum duration of edicts
+
+--NMilitary
+--NDefines.NMilitary.
+NDefines.NMilitary.MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 1.6    -- Manpower reserve factor (multiplied by 1000 per regiment)
+NDefines.NMilitary.MERCENARY_COMPANY_HIRING_COST_MONTHS = 57.6      -- Initial hiring cost in months of maintenance
