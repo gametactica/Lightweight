@@ -103,7 +103,7 @@ country_event = {
             ROOT = {
                 change_variable = {
                     which = gt_objective_score
-                    value = 20
+                    value = 10
                 }
             }
         }
@@ -897,17 +897,40 @@ country_event = {
         }
         #10 points for each Imperial province owned if the player is not the Emperor or a member of the HRE. These provinces must be owned directly and not through subjects.
         if = {
-            limit = { is_part_of_hre = no }
+            limit = {
+                is_part_of_hre = no
+                is_emperor = no
+            }
+            set_variable = {
+                which = gt_imperial_province_score
+                value = 0
+            }
             every_owned_province = {
                 limit = {
                     is_part_of_hre = yes
                 }
                 ROOT = {
                     change_variable = {
-                        which = gt_objective_score
+                        which = gt_imperial_province_score
                         value = 10
                     }
                 }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = gt_imperial_province_score
+                        value = 100
+                    }
+                }
+                set_variable = {
+                    which = gt_imperial_province_score
+                    value = 100
+                }
+            }
+            change_variable = {
+                which = gt_score
+                which = gt_imperial_province_score
             }
         }
         #20 x (DotF Rank) pts for holding a Defender of the Faith title.
