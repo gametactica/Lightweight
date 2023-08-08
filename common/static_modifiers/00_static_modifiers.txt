@@ -603,6 +603,7 @@ positive_stability = {
 	monthly_ottoman_decadence = -0.05
 	monthly_heir_claim_increase = 0.05
 	reelection_cost = -0.05
+	global_manpower_modifier = 0.1
 }
 
 privateering = {
@@ -623,6 +624,7 @@ negative_stability = {
 	yearly_harmony = 0.25
 	monthly_russian_modernization = 0.03
 	monthly_ottoman_decadence = -0.15
+	global_autonomy = -0.01
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
