@@ -91,7 +91,7 @@ country_event = {
 				id = GT_setup.6
 			}
         }
-        DAN = {
+        SWE = {
             country_event = {
 				id = GT_setup.6
 			}
@@ -126,6 +126,14 @@ country_event = {
         2980 = {
             set_province_flag = gt_imperial_objective
         }
+        #Amsterdam
+        97 = {
+            set_province_flag = gt_imperial_objective
+        }
+        #Wien
+        134 = {
+            set_province_flag = gt_imperial_objective
+        }
         #Conqueror Objectives
         #Danzig
         43 = {
@@ -139,8 +147,8 @@ country_event = {
         236 = {
             set_province_flag = gt_conqueror_objective
         }
-        #Amsterdam
-        97 = {
+        #Sjælland
+        12 = {
             set_province_flag = gt_conqueror_objective
         }
         #​Pest

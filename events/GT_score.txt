@@ -322,9 +322,11 @@ country_event = {
         every_province = {
             limit = {
                 has_province_flag = gt_conqueror_objective
-                OR = {
-                    is_part_of_hre = yes
-                    owned_by_or_ai_subject_of = { TAG = emperor }
+                owner = {
+                    OR = {
+                        is_part_of_hre = yes
+                        is_emperor = yes
+                    }
                 }
             }
             ROOT = {
@@ -773,18 +775,18 @@ country_event = {
                 value = 100
             }
         }
-        #London - Amsterdam
+        #London - Sjælland
         if = {
             limit = {
                 OR = {
                     owns_or_ai_subject = { PROVINCE = 236 }
-                    owns_or_ai_subject = { PROVINCE = 97 }
+                    owns_or_ai_subject = { PROVINCE = 12 }
                 }
                 NOT = {
                     any_country = {
                         OR = {
                             owns_or_ai_subject = { PROVINCE = 236 }
-                            owns_or_ai_subject = { PROVINCE = 97 }
+                            owns_or_ai_subject = { PROVINCE = 12 }
                         }
                         has_country_flag = gt_despot
                     }
