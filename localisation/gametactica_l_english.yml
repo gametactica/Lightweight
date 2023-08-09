@@ -79,3 +79,5 @@
  GT_dnz.1.a:0 ""
 #Dilpomatic actions tooltips
  SUBSIDIES_RECEIVING_SUBSIDES:0 "You cannot subsidise another nation while receiving subsidies yourself"
+ CANNOT_ANNEX_CAMPAIGN_NATION:0 "You cannot annex a campaign nation"
+ CANNOT_INTEGRATE_CAMPAIGN_NATION:0 "You cannot integrate a campaign nation"

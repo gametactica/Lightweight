@@ -328,6 +328,18 @@ royal_marriage = {
 }
 
 annexationaction = {
+	#GT
+	condition = {
+		tooltip = CANNOT_ANNEX_CAMPAIGN_NATION
+		potential = { always = yes }
+		allow = {
+			NOT = {
+				FROM = {
+					has_country_flag = gt_campaign_nation
+				}
+			}
+		}
+	}
 	condition = {
 		tooltip = ANNEX_TOO_LOW
 		potential = {
@@ -419,6 +431,18 @@ annexationaction = {
 }
 
 integrationaction = {
+	#GT
+	condition = {
+		tooltip = CANNOT_INTEGRATE_CAMPAIGN_NATION
+		potential = { always = yes }
+		allow = {
+			NOT = {
+				FROM = {
+					has_country_flag = gt_campaign_nation
+				}
+			}
+		}
+	}
 	condition = {
 		tooltip = INTEGRATETOOLOWDESC
 		potential = {
