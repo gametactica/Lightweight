@@ -501,7 +501,7 @@ guiTypes = {
 			buttonFont = "vic_18"
 		}
 
-
+		#GT
 		guiButtonType = {
 			name = "dismantel_button"
 			position = { x= -999 y = -999 }
