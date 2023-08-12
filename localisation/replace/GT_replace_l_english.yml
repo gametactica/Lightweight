@@ -4,3 +4,5 @@
  NOALL_THEY_DISLIKE:0 "$WHO$ dislikes us, so we cannot ask them. They need to have a SPLENDID (+75) opinion of us for an §Yalliance§!, and it is currently $VAL$.  §YSupport Independence§! requires positive mutual relations."
 #Inability to diplo vassilize message
  VASSALINVALID:0 "To offer Vassalization you must 1) guarantee the target 2) have a relation of at least +190 3) the target country must be at peace."
+#Edicts
+ edict_of_absolutism_tt:0 "Allows State Edict '§YEdict of Absolutism§!'\n (Local prosperity growth: §G0.25§!)\n"
