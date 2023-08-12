@@ -41,3 +41,7 @@ NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60                       -- Minimum d
 --NDefines.NMilitary.
 NDefines.NMilitary.MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 1.6    -- Manpower reserve factor (multiplied by 1000 per regiment)
 NDefines.NMilitary.MERCENARY_COMPANY_HIRING_COST_MONTHS = 57.6      -- Initial hiring cost in months of maintenance
+
+--NReligion
+--NDefines.NReligion.
+NDefines.NReligion.MAX_PAPAL_INFLUENCE = 250                        -- Max stored papal influence
