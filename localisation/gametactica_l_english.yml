@@ -4,6 +4,8 @@
  GT_Reputation_Sabotaged:0 "Nation of Ill Repute"
 #Inability to raise stability message
  CANNOT_INCREASE_STABILITY:0 "It's not possible to increase stability while at war."
+#Inability to reduce war exhaustion message
+ CANNOT_REDUCE_WAR_EXHAUSTION_AT_WAR:0 "It's not possible to reduce war exhaustion while at war."
 #Score events
  GT_score.2.t:0 "Score gain trigger event"
  GT_score.2.d:0 ""

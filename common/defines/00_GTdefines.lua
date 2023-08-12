@@ -24,6 +24,10 @@ NDefines.NCountry.CULTURE_COST_DIFF_PRIMARY = 25					-- Difference in cost in pe
 NDefines.NCountry.PS_ARTILLERY_BARRAGE = 100                        -- Artillery barrage cost
 NDefines.NCountry.PS_FORCE_MARCH = 4                                -- Forced march cost
 NDefines.NCountry.PS_RAISE_WAR_TAXES = 4                            -- Monthly Cost
+NDefines.NCountry.BASE_POWER_INCREASE = 1                           -- Monthly base increase
+NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 20                        -- Cost per development of creating a core
+NDefines.NCountry.PS_BUY_GENERAL = 100                              -- Cost of recruting a general
+NDefines.NCountry.PS_BUY_ADMIRAL = 100                              -- Cost of recruting an admiral
 
 --NEconomy
 --NDefines.NEconomy.

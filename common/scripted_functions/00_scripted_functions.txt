@@ -20,7 +20,15 @@ can_leave_hre_league = {
 can_harsh_treatment = {
 }
 
+#GT
 can_reduce_war_exhaustion = {
+	condition = {
+		tooltip = "CANNOT_REDUCE_WAR_EXHAUSTION_AT_WAR"
+		potential = {}
+		allow = {
+			is_at_war = no
+		}
+	}
 }
 
 can_reduce_inflation = {
