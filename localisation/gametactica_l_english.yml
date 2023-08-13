@@ -85,3 +85,6 @@
  CANNOT_INTEGRATE_CAMPAIGN_NATION:0 "You cannot integrate a campaign nation"
 #Event modifiers
  gt_imperial_objective_province_modifier:0 "§YImperial objective§"
+#Triggered modifiers
+ campaign_nation_pu:0 "Personal union over a campaign nation"
+ has_campaign_nation_pu:0 "Has a personal union over a campaign nation"
