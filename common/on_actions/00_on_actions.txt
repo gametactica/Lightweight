@@ -1199,6 +1199,15 @@ on_new_consort = {
 
 # country
 on_monarch_death = {
+	#GT
+	if = {
+		limit = {
+			is_emperor = yes
+		}
+		country_event = {
+			id = GT_score.2
+		}
+	}
 	if = {
 		limit = {
 			tag = ANS
@@ -1527,9 +1536,9 @@ on_successive_emperor = {
 # ROOT = New Emperor 
 on_emperor_elected = {
 	#GT
-	events = {
-		GT_score.2
-	}
+	# events = {
+	# 	GT_score.2
+	# }
 
 	every_elector = {
 		if = {
