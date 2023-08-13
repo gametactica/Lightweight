@@ -54,7 +54,7 @@ country_event = {
 				id = GT_setup.4
 			}
         }
-        GEL = {
+        BRB = {
             country_event = {
 				id = GT_setup.4
 			}
