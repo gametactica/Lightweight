@@ -1535,11 +1535,6 @@ on_successive_emperor = {
 # FROM = Previous Emperor
 # ROOT = New Emperor 
 on_emperor_elected = {
-	#GT
-	# events = {
-	# 	GT_score.2
-	# }
-
 	every_elector = {
 		if = {
 			limit = {
