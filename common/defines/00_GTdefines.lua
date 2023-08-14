@@ -41,6 +41,8 @@ NDefines.NEconomy.EDICTS_DURATION_MONTHS = 60                       -- Minimum d
 --NDefines.NMilitary.
 NDefines.NMilitary.MERCENARY_COMPANY_MANPOWER_PER_REGIMENT = 1.6    -- Manpower reserve factor (multiplied by 1000 per regiment)
 NDefines.NMilitary.MERCENARY_COMPANY_HIRING_COST_MONTHS = 57.6      -- Initial hiring cost in months of maintenance
+NDefines.NMilitary.RIVER_CROSSING_PENALTY = -2					    -- Dice roll penalty from river crossing
+NDefines.NMilitary.STRAIT_CROSSING_PENALTY = -3						-- Dice roll penalty from strait crossing
 
 --NReligion
 --NDefines.NReligion.
