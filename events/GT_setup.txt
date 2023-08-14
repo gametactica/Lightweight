@@ -43,6 +43,11 @@ country_event = {
 				id = GT_setup.3
 			}
         }
+        TEU = {
+            country_event = {
+                id = GT_setup.3
+            }
+        }
         #Princes
         SAX = {
             country_event = {
@@ -64,6 +69,16 @@ country_event = {
 				id = GT_setup.4
 			}
         }
+        BUR = {
+            country_event = {
+				id = GT_setup.4
+			}
+        }
+        MLO = {
+            country_event = {
+				id = GT_setup.4
+			}
+        }
         #Magnates
         VEN = {
             country_event = {
@@ -80,6 +95,16 @@ country_event = {
 				id = GT_setup.5
 			}
         }
+        FRI = {
+            country_event = {
+				id = GT_setup.5
+			}
+        }
+        FRN = {
+            country_event = {
+				id = GT_setup.5
+			}
+        }
         #Despots
         TUR = {
             country_event = {
@@ -91,12 +116,17 @@ country_event = {
 				id = GT_setup.6
 			}
         }
-        SWE = {
+        POL = {
             country_event = {
 				id = GT_setup.6
 			}
         }
-        POL = {
+        BOH = {
+            country_event = {
+				id = GT_setup.6
+			}
+        }
+        SWE = {
             country_event = {
 				id = GT_setup.6
 			}
