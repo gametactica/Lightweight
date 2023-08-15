@@ -27,6 +27,7 @@ NDefines.NCountry.PS_RAISE_WAR_TAXES = 4                            -- Monthly C
 NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 20                        -- Cost per development of creating a core
 NDefines.NCountry.PS_BUY_GENERAL = 100                              -- Cost of recruting a general
 NDefines.NCountry.PS_BUY_ADMIRAL = 100                              -- Cost of recruting an admiral
+NDefines.NCountry.ABDICATE_RULING_LENGTH_THRESHOLD = 100            -- How many years a ruler must have ruled before abdicaton
 
 --NEconomy
 --NDefines.NEconomy.
