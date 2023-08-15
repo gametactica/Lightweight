@@ -127,7 +127,7 @@ sea_zone = {
 }
 
 land_province = {
-	max_attrition = 15						#GT Maximum Attrition is 15
+	max_attrition = 10						#GT Maximum Attrition is 15
 	local_manpower_modifier = 0.25			#25% of manpower.
 	local_has_musketeers = yes
 	local_has_streltsy = yes
