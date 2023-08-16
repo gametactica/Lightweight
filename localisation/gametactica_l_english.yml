@@ -70,10 +70,10 @@
  GT_introduction.1.a:0 "I hereby accept these terms which are only as just as they benefit me personally."
 #Protected area events
  GT_protected_area.1.t:0 "Province lost due to area protection"
- GT_protected_area.1.d:0 "We have lost province [Root.GetName] because its in a protected area"
- GT_protected_area.1.a:0 "Taking it was a mistake"
+ GT_protected_area.1.d:0 "We have lost provinces in [Root.GetAreaName] because its a protected area."
+ GT_protected_area.1.a:0 "Taking them was a mistake"
  GT_protected_area.2.t:0 "Province regained due to area protection"
- GT_protected_area.2.d:0 "We have regained province [Root.GetName] because its in our protected area"
+ GT_protected_area.2.d:0 "We have regained lost provinces in [Root.GetAreaName] because its our protected area.\n§RRecovered provinces have gained 20 devastation.§"
  GT_protected_area.2.a:0 "At least not all is lost"
 #DNZ
  GT_dnz.1.t:0 "Add teutonic cores"

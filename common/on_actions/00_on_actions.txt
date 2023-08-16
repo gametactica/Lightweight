@@ -4681,21 +4681,6 @@ on_province_owner_change = {
 	if = {
 		limit = {
 			has_province_flag = gt_protected_area
-			NOT = {
-				AND = {
-					owner = { has_country_flag = gt_campaign_nation }
-					owner = {
-						check_variable = {
-							which = gt_campaign_nation_order
-							which = ROOT
-						}
-					}
-					check_variable = {
-						which = gt_campaign_nation_order
-						which = owner
-					}
-				}
-			}
 			AND = {
 				FROM = { has_country_flag = gt_campaign_nation }
 				FROM = {
@@ -4714,6 +4699,7 @@ on_province_owner_change = {
 			id = GT_protected_area.1
 		}
 		cede_province = FROM
+		add_devastation = 20
 		province_event = {
 			id = GT_protected_area.2
 		}

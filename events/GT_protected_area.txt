@@ -27,6 +27,5 @@ province_event = {
 
 	option = {
 		name = GT_protected_area.2.a
-		add_devastation = 20
 	}
 }
