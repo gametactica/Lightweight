@@ -772,7 +772,7 @@ hre_dominant_reformed = {
 ######################################
 # Robot parts
 ######################################
-
+#GT
 # synthetic_remnants = {
 # 	potential = {
 # 		has_global_flag = synthetics_defeated
