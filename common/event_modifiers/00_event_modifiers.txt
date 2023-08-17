@@ -7,6 +7,9 @@ gt_imperial_objective_province_modifier = {
 	picture = "imperial_authority_value"
 	is_imperial_modifier = yes
 }
+gt_campaign_nation_inheritance_prevention = {
+	chance_to_inherit = -10
+}
 #GT end
 
 national_bank_interest = {

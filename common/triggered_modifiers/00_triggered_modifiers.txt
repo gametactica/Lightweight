@@ -3,25 +3,6 @@
 #
 # Effects are fully scriptable here.
 
-#GT
-campaign_nation_pu = {
-	potential = {
-		has_subject_of_type = personal_union
-	}
-	trigger = {
-		custom_trigger_tooltip = {
-			tooltip = has_campaign_nation_pu
-			any_subject_country = {
-				AND = {
-					has_country_flag = gt_campaign_nation
-					is_subject_of_type = personal_union
-				}
-			}
-		}
-	}
-	chance_to_inherit = -10
-}
-
 ###########################################
 # Discovery of the East Indian trade route.
 ###########################################

@@ -2,6 +2,19 @@
 
 # country
 on_startup = {
+	#GT
+	if = {
+		limit = {
+			any_subject_country = {
+				has_country_flag = gt_campaign_nation
+				is_subject_of_type = personal_union
+			}
+		}
+		add_country_modifier = {
+			name = gt_campaign_nation_inheritance_prevention
+			duration = -1
+		}
+	}
 	if = {
 		limit = {
 			current_age = age_of_discovery
@@ -5144,6 +5157,19 @@ on_dependency_gained = {
 			}
 		}
 	}
+	#GT
+	if = {
+		limit = {
+			FROM = {
+				has_country_flag = gt_campaign_nation
+				is_subject_of_type = personal_union
+			}
+		}
+		add_country_modifier = {
+			name = gt_campaign_nation_inheritance_prevention
+			duration = -1
+		}
+	}
 }
 
 # ROOT = Overlord, FROM = Minor
@@ -5176,6 +5202,19 @@ on_dependency_lost = {
 			limit = { has_country_modifier = revoked_war_rights }
 			remove_country_modifier = revoked_war_rights
 		}
+	}
+	#GT
+	if = {
+		limit = {
+			NOT = {
+				any_subject_country = {
+						has_country_flag = gt_campaign_nation
+						is_subject_of_type = personal_union
+						NOT = { tag = FROM }
+				}
+			}
+		}
+		remove_country_modifier = gt_campaign_nation_inheritance_prevention
 	}
 }
 
