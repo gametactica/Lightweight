@@ -531,6 +531,17 @@ form_coalition = {
 				AND = {
 					ai = no
 					FROM = { ai = no }
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+					}		
+					NOT = {
+						has_opinion_modifier = {
+							modifier = aggressive_expansion
+							who = FROM
+							value = -14
+						}
+					}
 				}
 				AND = {
 					has_opinion_modifier = {
