@@ -90,7 +90,7 @@ country_event = {
             which = gt_objective_score
             value = 0
         }
-        #20 points for each Conqueror Objective or Imperial Objective province that is Catholic (cooperative objective).
+        #10 points for each Conqueror Objective or Imperial Objective province that is Catholic (cooperative objective).
         #Hamburg
         every_province = {
             limit = {
@@ -105,6 +105,40 @@ country_event = {
                     which = gt_objective_score
                     value = 10
                 }
+            }
+        }
+        #100 points if neither the Princes nor the Magnates gain any score from their cooperative objectives (cooperative objective).
+        if = {
+            limit = {
+                NOT = {
+                    any_province = {
+                        has_province_flag = gt_conqueror_objective
+                        owner = {
+                            OR = {
+                                is_part_of_hre = yes
+                                is_emperor = yes
+                            }
+                        }
+                    }
+                }
+                NOT = {
+                    any_province = {
+                        OR = {
+                            has_province_flag = gt_imperial_objective
+                            has_province_flag = gt_conqueror_objective
+                        }
+                        owner = {
+                            AND = {
+                                is_in_trade_league = yes
+                                is_trade_league_leader = no
+                            }
+                        }
+                    }
+                }
+            }
+            change_variable = {
+                which = gt_objective_score
+                value = 100
             }
         }
         #100 points for holding the Curia.
@@ -336,6 +370,38 @@ country_event = {
                 }
             }
         }
+        #100 points if neither the Bishops nor the Magnates gain any score from their cooperative objectives (cooperative objective).
+        if = {
+            limit = {
+                NOT = {
+                    any_province = {
+                        OR = {
+                            has_province_flag = gt_imperial_objective
+                            has_province_flag = gt_conqueror_objective
+                        }
+                        religion = catholic
+                    }
+                }
+                NOT = {
+                    any_province = {
+                        OR = {
+                            has_province_flag = gt_imperial_objective
+                            has_province_flag = gt_conqueror_objective
+                        }
+                        owner = {
+                            AND = {
+                                is_in_trade_league = yes
+                                is_trade_league_leader = no
+                            }
+                        }
+                    }
+                }
+            }
+            change_variable = {            
+                which = gt_objective_score
+                value = 100
+            }
+        }
         #X points for each Imperial Objective owned, where X is equal to Imperial Legitimacy.
         every_province = {
             limit = {
@@ -538,6 +604,35 @@ country_event = {
                     which = gt_objective_score
                     value = 20
                 }
+            }
+        }
+        #100 points if neither the Bishops nor the Princes gain any score from their cooperative objectives (cooperative objective).
+        if = {
+            limit = {
+                NOT = {
+                    any_province = {
+                        OR = {
+                            has_province_flag = gt_imperial_objective
+                            has_province_flag = gt_conqueror_objective
+                        }
+                        religion = catholic
+                    }
+                }
+                NOT = {
+                    any_province = {
+                        has_province_flag = gt_conqueror_objective
+                        owner = {
+                            OR = {
+                                is_part_of_hre = yes
+                                is_emperor = yes
+                            }
+                        }
+                    }
+                }
+            }
+            change_variable = {
+                which = gt_objective_score
+                value = 100
             }
         }
         #30 points each for holding at least 10% trade power in the Wien, Saxony, Rhineland, or Champagne trade nodes. This is increased to 100 points if the nation hast most trade power.
@@ -751,6 +846,49 @@ country_event = {
         set_variable = {            
             which = gt_objective_score
             value = 0
+        }
+        #100 points if no other group gains any score from their cooperative objectives (cooperative objective).​
+        if = {
+            limit = {
+                NOT = {
+                    any_province = {
+                        OR = {
+                            has_province_flag = gt_imperial_objective
+                            has_province_flag = gt_conqueror_objective
+                        }
+                        religion = catholic
+                    }
+                }
+                NOT = {
+                    any_province = {
+                        has_province_flag = gt_conqueror_objective
+                        owner = {
+                            OR = {
+                                is_part_of_hre = yes
+                                is_emperor = yes
+                            }
+                        }
+                    }
+                }
+                NOT = {
+                    any_province = {
+                        OR = {
+                            has_province_flag = gt_imperial_objective
+                            has_province_flag = gt_conqueror_objective
+                        }
+                        owner = {
+                            AND = {
+                                is_in_trade_league = yes
+                                is_trade_league_leader = no
+                            }
+                        }
+                    }
+                }
+            }
+            change_variable = {
+                which = gt_objective_score
+                value = 100
+            }
         }
         #100 points for owning at least one of the objectives from a Conqueror Objective pair. Owning both objectives in a pair does not provide additional points, but if another Despot owns the other Conqueror Objective from that pair, the value of both objectives becomes 0 pts for Despots as long as two separate despots each own one objective of the pair..
         #Danzig - Novgorod
