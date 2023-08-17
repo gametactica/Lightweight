@@ -1,7 +1,7 @@
 ﻿l_english:
  #Diplomacy
- NOALL_WE_DISLIKE:0 "We cannot ask $WHO$ for this as we need to have a SPLENDID (+75) opinion of them for an §Yalliance§!, currently at $VAL$.  §YSupport Independence§! requires positive mutual relations."
- NOALL_THEY_DISLIKE:0 "$WHO$ dislikes us, so we cannot ask them. They need to have a SPLENDID (+75) opinion of us for an §Yalliance§!, and it is currently $VAL$.  §YSupport Independence§! requires positive mutual relations."
+ NOALL_WE_DISLIKE:0 "We cannot ask $WHO$ for this as we need to have a SPLENDID (+75) opinion of them for an §Yalliance§!, currently at $VAL$."
+ NOALL_THEY_DISLIKE:0 "$WHO$ dislikes us, so we cannot ask them. They need to have a SPLENDID (+75) opinion of us for an §Yalliance§!, and it is currently $VAL$."
 #Inability to diplo vassilize message
  VASSALINVALID:0 "To offer Vassalization you must 1) guarantee the target 2) have a relation of at least +190 3) the target country must be at peace."
 #Edicts
