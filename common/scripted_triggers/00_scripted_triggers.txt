@@ -56,6 +56,23 @@ any_owned_or_ai_subject_province_has_flag = {
 		}
 	}
 }
+
+same_religion_as_hre = {
+	OR = {
+		AND = {
+			religion = catholic
+			hre_religion = catholic
+		}
+		AND = {
+			religion = protestant
+			hre_religion = protestant
+		}
+		AND = {
+			religion = reformed
+			hre_religion = reformed
+		}
+	}
+}
 #GT end
 
 #GENERAL TRIGGERS

@@ -188,6 +188,17 @@ on_startup = {
 
 # country
 on_religion_change = {
+	#GT
+	if = {
+		limit = {
+			same_religion_as_hre = yes
+			hre_religion_locked = yes
+		}
+		add_country_modifier = {
+			name = gt_same_religion_as_hre
+			duration = -1
+		}
+	}
 	on_religion_change_estate_privileges_effect = yes
 	judaism_on_religion_change_effect = yes
 	###removes catholic modifiers
@@ -1674,6 +1685,21 @@ on_hre_province_reconquest = {
 }
 
 on_lock_hre_religion = {
+	#GT
+	every_country = {
+		if = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				religion = catholic
+			}
+			add_country_modifier = {
+				name = gt_same_religion_as_hre
+				duration = -1
+			}
+		}
+	}
 	events = {
 		religious_leagues.1
 		religious_leagues.8
@@ -1681,6 +1707,21 @@ on_lock_hre_religion = {
 }
 
 on_change_hre_religion = {
+	#GT
+	every_country = {
+		if = {
+			limit = {
+				capital_scope = {
+					continent = europe
+				}
+				same_religion_as_hre = yes
+			}
+			add_country_modifier = {
+				name = gt_same_religion_as_hre
+				duration = -1
+			}
+		}
+	}
 	events = {
 		religious_leagues.2
 		religious_leagues.3

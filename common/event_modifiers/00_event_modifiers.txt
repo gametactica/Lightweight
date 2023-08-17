@@ -7,8 +7,17 @@ gt_imperial_objective_province_modifier = {
 	picture = "imperial_authority_value"
 	is_imperial_modifier = yes
 }
+
 gt_campaign_nation_inheritance_prevention = {
 	chance_to_inherit = -10
+}
+
+gt_same_religion_as_hre = {
+	legitimacy = 0.25
+	tolerance_own = 1
+	global_missionary_strength = 0.01
+	imperial_authority = 0.25
+	religion = yes
 }
 #GT end
 

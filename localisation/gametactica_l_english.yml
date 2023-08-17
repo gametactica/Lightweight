@@ -87,6 +87,8 @@
  gt_imperial_objective_province_modifier:0 "§YImperial objective§"
  gt_campaign_nation_inheritance_prevention:0 "Campaign nation inheritance prevention"
  gt_campaign_nation_inheritance_prevention_desc:0 "This prevents players from being accidently inherited"
-#Triggered modifiers
- campaign_nation_pu:0 "Personal union over a campaign nation"
- has_campaign_nation_pu:0 "Has a personal union over a campaign nation"
+ gt_same_religion_as_hre:0 "Same religion as HRE"
+ gt_same_religion_as_hre_desc:0 "Our faith is the same as the official religion of the Holy Roman Empire. This grants our nation a certain moral legitimacy."
+#Province triggered modifiers
+ custodian_of_the_two_holy_mosques:0 "Custodian of the Holy Cities"
+ desc_custodian_of_the_two_holy_mosques:0 "We control the cities of Mecca and Medina and with them the most sacred shrines in the Islamic world."
