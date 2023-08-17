@@ -90,6 +90,10 @@ country_event = {
             which = gt_objective_score
             value = 0
         }
+        set_variable = {
+            which = gt_catholic_objectives
+            value = 0
+        }
         #10 points for each Conqueror Objective or Imperial Objective province that is Catholic (cooperative objective).
         #Hamburg
         every_province = {
@@ -105,9 +109,13 @@ country_event = {
                     which = gt_objective_score
                     value = 10
                 }
+                change_variable = {
+                    which = gt_catholic_objectives
+                    value = 1
+                }
             }
         }
-        #100 points if neither the Princes nor the Magnates gain any score from their cooperative objectives (cooperative objective).
+        #100 points if 0 Conqueror Objectives are held by members of the HRE or the Emperor, 0 Objectives are held by trade league members and at least 5 objectives are Catholic (cooperative objective).
         if = {
             limit = {
                 NOT = {
@@ -134,6 +142,10 @@ country_event = {
                             }
                         }
                     }
+                }
+                check_variable = {
+                    which = gt_catholic_objectives
+                    value = 5
                 }
             }
             change_variable = {
@@ -370,16 +382,32 @@ country_event = {
                 }
             }
         }
-        #100 points if neither the Bishops nor the Magnates gain any score from their cooperative objectives (cooperative objective).
+        #100 points if less than 5 objectives are Catholic, 0 Objectives are held by trade league members, and at least 1 Conqueor Objective is held by a member of the HRE or the Emperor (cooperative objective).
+        set_variable = {
+            which = gt_catholic_objectives
+            value = 0
+        }
+        every_province = {
+            limit = {
+                OR = {
+                    has_province_flag = gt_imperial_objective
+                    has_province_flag = gt_conqueror_objective
+                }
+                religion = catholic
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_catholic_objectives
+                    value = 1
+                }
+            }
+        }
         if = {
             limit = {
                 NOT = {
-                    any_province = {
-                        OR = {
-                            has_province_flag = gt_imperial_objective
-                            has_province_flag = gt_conqueror_objective
-                        }
-                        religion = catholic
+                    check_variable = {
+                        which = gt_catholic_objectives
+                        value = 5
                     }
                 }
                 NOT = {
@@ -393,6 +421,15 @@ country_event = {
                                 is_in_trade_league = yes
                                 is_trade_league_leader = no
                             }
+                        }
+                    }
+                }
+                any_province = {
+                    has_province_flag = gt_conqueror_objective
+                    owner = {
+                        OR = {
+                            is_part_of_hre = yes
+                            is_emperor = yes
                         }
                     }
                 }
@@ -606,16 +643,32 @@ country_event = {
                 }
             }
         }
-        #100 points if neither the Bishops nor the Princes gain any score from their cooperative objectives (cooperative objective).
+        #100 points if less than 5 Objectives are Catholic, 0 Conqueror Objectives are held by members of the HRE or the Emperor, and at least 1 Objective is held by a trade league member (cooperative objective).
+        set_variable = {
+            which = gt_catholic_objectives
+            value = 0
+        }
+        every_province = {
+            limit = {
+                OR = {
+                    has_province_flag = gt_imperial_objective
+                    has_province_flag = gt_conqueror_objective
+                }
+                religion = catholic
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_catholic_objectives
+                    value = 1
+                }
+            }
+        }
         if = {
             limit = {
                 NOT = {
-                    any_province = {
-                        OR = {
-                            has_province_flag = gt_imperial_objective
-                            has_province_flag = gt_conqueror_objective
-                        }
-                        religion = catholic
+                    check_variable = {
+                        which = gt_catholic_objectives
+                        value = 5
                     }
                 }
                 NOT = {
@@ -629,8 +682,20 @@ country_event = {
                         }
                     }
                 }
+                any_province = {
+                    OR = {
+                        has_province_flag = gt_imperial_objective
+                        has_province_flag = gt_conqueror_objective
+                    }
+                    owner = {
+                        AND = {
+                            is_in_trade_league = yes
+                            is_trade_league_leader = no
+                        }
+                    }
+                }
             }
-            change_variable = {
+            change_variable = {            
                 which = gt_objective_score
                 value = 100
             }
@@ -847,16 +912,32 @@ country_event = {
             which = gt_objective_score
             value = 0
         }
-        #100 points if no other group gains any score from their cooperative objectives (cooperative objective).​
+        #100 points if less than 5 objectives are Catholic, 0 Conqueror Objectives are held by members of the HRE or the Emperor, and 0 Objectives are held by a trade league member (cooperative objective).
+        set_variable = {
+            which = gt_catholic_objectives
+            value = 0
+        }
+        every_province = {
+            limit = {
+                OR = {
+                    has_province_flag = gt_imperial_objective
+                    has_province_flag = gt_conqueror_objective
+                }
+                religion = catholic
+            }
+            ROOT = {
+                change_variable = {
+                    which = gt_catholic_objectives
+                    value = 1
+                }
+            }
+        }
         if = {
             limit = {
                 NOT = {
-                    any_province = {
-                        OR = {
-                            has_province_flag = gt_imperial_objective
-                            has_province_flag = gt_conqueror_objective
-                        }
-                        religion = catholic
+                    check_variable = {
+                        which = gt_catholic_objectives
+                        value = 5
                     }
                 }
                 NOT = {
@@ -885,7 +966,7 @@ country_event = {
                     }
                 }
             }
-            change_variable = {
+            change_variable = {            
                 which = gt_objective_score
                 value = 100
             }
