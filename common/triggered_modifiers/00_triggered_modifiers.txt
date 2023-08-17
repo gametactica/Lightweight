@@ -773,15 +773,15 @@ hre_dominant_reformed = {
 # Robot parts
 ######################################
 
-synthetic_remnants = {
-	potential = {
-		has_global_flag = synthetics_defeated
-	}
-	trigger = {
-		has_global_flag = synthetics_defeated
-	}
-	technology_cost = -0.25
-}
+# synthetic_remnants = {
+# 	potential = {
+# 		has_global_flag = synthetics_defeated
+# 	}
+# 	trigger = {
+# 		has_global_flag = synthetics_defeated
+# 	}
+# 	technology_cost = -0.25
+# }
 
 ######################################
 # The Golden Age of Piracy
