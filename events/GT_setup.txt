@@ -468,18 +468,6 @@ country_event = {
 				}
 			}
 		}
-        else_if = {
-            limit = {
-                tag = TEU
-            }
-            east_prussia_area = {
-                set_province_flag = gt_protected_area
-				set_variable = {
-					which = gt_campaign_nation_order
-					which = ROOT
-				}
-            }
-        }
 		else = {
 			capital_scope = {
 				area = {
