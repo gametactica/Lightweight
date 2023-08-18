@@ -15,8 +15,8 @@ NDefines.NDiplomacy.SUPPORT_REBELS_EFFECT = 20
 --NCountry
 --NDefines.NCountry.
 NDefines.NCountry.STATE_MAINTENANCE_DISTANCE_FACTOR = 0.002	        -- distance
-NDefines.NCountry.PS_BOOST_STABILITY = 500                          -- Boost stability base cost
-NDefines.NCountry.PS_ADD_ACCEPTED_CULTURE = 700                     -- Add accepted culture base cost
+NDefines.NCountry.PS_BOOST_STABILITY = 400                          -- Boost stability base cost
+NDefines.NCountry.PS_ADD_ACCEPTED_CULTURE = 500                     -- Add accepted culture base cost
 NDefines.NCountry.PS_CHANGE_CULTURE = 20                            -- Change culture cost per dev
 NDefines.NCountry.CULTURE_COST_DIFF_ORIGINAL = -25	                -- Difference in cost in percent to convert to original culture.
 NDefines.NCountry.CULTURE_COST_DIFF_ADJACENT = 0				    -- Difference in cost in percent to convert to adjacent culture.
