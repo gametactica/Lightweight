@@ -1225,15 +1225,6 @@ on_new_consort = {
 on_monarch_death = {
 	if = {
 		limit = {
-			tag = event_target:gt_previous_emperor
-		}
-		country_event = {
-			id = GT_score.2
-		}
-		clear_global_event_target = gt_previous_emperor
-	}
-	if = {
-		limit = {
 			tag = ANS
 			BRA = {
 				has_country_flag = albrecht_achilles_flag
@@ -1560,10 +1551,18 @@ on_successive_emperor = {
 # ROOT = New Emperor 
 on_emperor_elected = {
 	#GT
-	FROM = {
-		save_global_event_target_as = gt_previous_emperor
+	if = {
+		limit = {
+			FROM = {
+				exists = yes
+				same_religion_as_hre = yes
+				is_subject = no
+			}
+		}
+		country_event = {
+			id = GT_score.2
+		}
 	}
-
 	every_elector = {
 		if = {
 			limit = {
