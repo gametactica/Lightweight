@@ -1,7 +1,7 @@
 country_decisions = {
 	GT_score_display = {
 		potential = {
-			ai = no
+			has_country_flag = gt_campaign_nation
 		}
 
 		allow = {
