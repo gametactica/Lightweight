@@ -18,4 +18,22 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	GT_score_display_observer = {
+		potential = {
+			ai = no
+			NOT = { has_country_flag = gt_campaign_nation }
+		}
+
+		allow = {
+			always = yes
+		}
+
+		effect = {
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
+
