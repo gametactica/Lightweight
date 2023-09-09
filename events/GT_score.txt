@@ -1148,7 +1148,7 @@ country_event = {
                 }
             }
             change_variable = {
-                which = gt_score
+                which = gt_objective_score
                 which = gt_imperial_province_score
             }
         }
